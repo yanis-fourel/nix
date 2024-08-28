@@ -1,5 +1,9 @@
 -- Configure Neovim diagnostic messages
 
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
+
 local function prefix_diagnostic(prefix, diagnostic)
   return string.format(prefix .. ' %s', diagnostic.message)
 end
