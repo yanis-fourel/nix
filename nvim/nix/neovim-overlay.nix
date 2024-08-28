@@ -46,6 +46,8 @@ with final.pkgs.lib; let
     cmp-cmdline # cmp command line suggestions
     cmp-cmdline-history # cmp command line history suggestions
 
+    oil-nvim # https://github.com/stevearc/oil.nvim/
+
     diffview-nvim # https://github.com/sindrets/diffview.nvim/
     neogit # https://github.com/TimUntersberger/neogit/
     gitsigns-nvim # https://github.com/lewis6991/gitsigns.nvim/
@@ -53,8 +55,6 @@ with final.pkgs.lib; let
     telescope-nvim # https://github.com/nvim-telescope/telescope.nvim/
 
     nvim-treesitter-context # nvim-treesitter-context
-
-    neo-tree-nvim # https://github.com/nvim-neo-tree/neo-tree.nvim
 
     vim-unimpaired # predefined ] and [ navigation keymaps | https://github.com/tpope/vim-unimpaired/
     eyeliner-nvim # Highlights unique characters for f/F and t/T motions | https://github.com/jinh0/eyeliner.nvim
@@ -69,8 +69,6 @@ with final.pkgs.lib; let
     plenary-nvim
     nvim-web-devicons
     vim-repeat
-    nvim-web-devicons # https://github.com/nvim-tree/nvim-web-devicons/
-    nui-nvim # https://github.com/MunifTanjim/nui.nvim/
     # ^ libraries that other plugins depend on
     # bleeding-edge plugins from flake inputs
     # (mkNvimPlugin inputs.wf-nvim "wf.nvim") # (example) keymap hints | https://github.com/Cassin01/wf.nvim
