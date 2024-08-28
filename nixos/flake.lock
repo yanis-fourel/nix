@@ -145,7 +145,7 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-V3rW/CVrJynrU805nR5HaVUQF9Y5swfkvRVZuK7K5e0=",
+        "narHash": "sha256-dDWdH0F76lSa5DEaQftqZ9uX89E6nIR7BxffQvZkfUU=",
         "path": "../nvim/",
         "type": "path"
       },
