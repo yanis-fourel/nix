@@ -4,6 +4,7 @@ vim.g.maplocalleader = " "
 require("diagnostic")
 require("options")
 require("keymaps")
+require("autocmd")
 
 
 -- let sqlite.lua (which some plugins depend on) know where to find sqlite
