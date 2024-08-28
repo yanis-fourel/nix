@@ -54,6 +54,8 @@ with final.pkgs.lib; let
 
     nvim-treesitter-context # nvim-treesitter-context
 
+    neo-tree-nvim # https://github.com/nvim-neo-tree/neo-tree.nvim
+
     vim-unimpaired # predefined ] and [ navigation keymaps | https://github.com/tpope/vim-unimpaired/
     eyeliner-nvim # Highlights unique characters for f/F and t/T motions | https://github.com/jinh0/eyeliner.nvim
     nvim-surround # https://github.com/kylechui/nvim-surround/
@@ -67,6 +69,8 @@ with final.pkgs.lib; let
     plenary-nvim
     nvim-web-devicons
     vim-repeat
+    nvim-web-devicons # https://github.com/nvim-tree/nvim-web-devicons/
+    nui-nvim # https://github.com/MunifTanjim/nui.nvim/
     # ^ libraries that other plugins depend on
     # bleeding-edge plugins from flake inputs
     # (mkNvimPlugin inputs.wf-nvim "wf.nvim") # (example) keymap hints | https://github.com/Cassin01/wf.nvim
