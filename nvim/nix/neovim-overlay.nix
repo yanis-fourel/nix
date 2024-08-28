@@ -53,6 +53,8 @@ with final.pkgs.lib; let
     gitsigns-nvim # https://github.com/lewis6991/gitsigns.nvim/
 
     telescope-nvim # https://github.com/nvim-telescope/telescope.nvim/
+    telescope-fzf-native-nvim
+    telescope-ui-select-nvim # https://github.com/nvim-telescope/telescope-ui-select.nvim
 
     nvim-treesitter-context # nvim-treesitter-context
 
@@ -67,7 +69,7 @@ with final.pkgs.lib; let
     # libraries that other plugins depend on
     sqlite-lua
     plenary-nvim
-    nvim-web-devicons
+    nvim-web-devicons # https://github.com/nvim-tree/nvim-web-devicons/
     vim-repeat
     # ^ libraries that other plugins depend on
     # bleeding-edge plugins from flake inputs
