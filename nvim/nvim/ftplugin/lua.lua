@@ -1,3 +1,5 @@
+-- TODO: add folke/lazydev
+
 vim.bo.comments = ':---,:--'
 
 local lua_ls_cmd = 'lua-language-server'

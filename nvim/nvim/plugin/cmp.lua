@@ -1,33 +1,4 @@
 
-		-- {
-		-- 	"L3MON4D3/LuaSnip",
-		-- 	dependencies = {
-		-- 		-- `friendly-snippets` contains a variety of premade snippets.
-		-- 		--    See the README about individual language/framework/plugin snippets:
-		-- 		--    https://github.com/rafamadriz/friendly-snippets
-		-- 		{
-		-- 			"rafamadriz/friendly-snippets",
-		-- 			config = function()
-		-- 				require("luasnip.loaders.from_vscode").lazy_load()
-		-- 			end,
-		-- 		},
-		-- 	},
-		-- },
-		-- "saadparwaiz1/cmp_luasnip",
-
-		-- {
-		-- 	"folke/lazydev.nvim",
-		-- 	ft = "lua", -- only load on lua files
-		-- 	opts = {
-		-- 		library = {
-		-- 			-- See the configuration section for more details
-		-- 			-- Load luvit types when the `vim.uv` word is found
-		-- 			{ path = "luvit-meta/library", words = { "vim%.uv" } },
-		-- 		},
-		-- 	},
-		-- },
-		-- { "Bilal2453/luvit-meta", lazy = true }, -- optional `vim.uv` typings
-
 local cmp = require("cmp")
 local luasnip = require("luasnip")
 luasnip.config.setup({})
