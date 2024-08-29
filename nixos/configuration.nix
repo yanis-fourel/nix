@@ -53,6 +53,7 @@
     pkgs.eza
     pkgs.man
     pkgs.man-pages
+    pkgs.brightnessctl
   ];
 
   # Needed for NVIDIA, might want to only allow unfree NVIDIA
