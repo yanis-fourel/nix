@@ -55,6 +55,7 @@
     pkgs.man-pages
     pkgs.brightnessctl
     pkgs.ripgrep
+	pkgs.wl-clipboard
   ];
 
   # Needed for NVIDIA, might want to only allow unfree NVIDIA
