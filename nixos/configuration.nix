@@ -54,6 +54,7 @@
     pkgs.man
     pkgs.man-pages
     pkgs.brightnessctl
+    pkgs.ripgrep
   ];
 
   # Needed for NVIDIA, might want to only allow unfree NVIDIA
