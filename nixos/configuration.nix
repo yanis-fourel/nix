@@ -56,6 +56,7 @@
     pkgs.brightnessctl
     pkgs.ripgrep
 	pkgs.wl-clipboard
+	pkgs.fd
   ];
 
   services.greetd = {
