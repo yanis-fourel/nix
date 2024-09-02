@@ -76,7 +76,7 @@
     };
   };
 
-  systemd.user.services.my-cool-user-service = {
+  systemd.user.services.megasync = {
 		  enable = true;
 		  after = [ "network.target" ];
 		  wantedBy = [ "default.target" ];
