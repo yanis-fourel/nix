@@ -59,7 +59,7 @@
 	pkgs.fd
 	pkgs.tig
 	pkgs.cryptomator
-	pkgs.dropbox
+	pkgs.dropbox-cli
   ];
 
   services.greetd = {
