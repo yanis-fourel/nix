@@ -57,6 +57,7 @@
     pkgs.ripgrep
 	pkgs.wl-clipboard
 	pkgs.fd
+	pkgs.tig
   ];
 
   services.greetd = {
