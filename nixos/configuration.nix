@@ -58,6 +58,7 @@
 	pkgs.wl-clipboard
 	pkgs.fd
 	pkgs.tig
+	pkgs.cryptomator
 	pkgs.dropbox
   ];
 
