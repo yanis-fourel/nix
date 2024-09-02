@@ -76,6 +76,18 @@
     };
   };
 
+  systemd.user.services.my-cool-user-service = {
+		  enable = true;
+		  after = [ "network.target" ];
+		  wantedBy = [ "default.target" ];
+		  description = "Megasync";
+		  serviceConfig = {
+				  Type = "simple";
+				  ExecStart = ''megasync'';
+		  };
+  };
+
+
   # Needed for NVIDIA, might want to only allow unfree NVIDIA
   nixpkgs.config.allowUnfree = true;
 
