@@ -59,6 +59,7 @@
 	pkgs.fd
 	pkgs.tig
 	pkgs.cryptomator
+	pkgs.megasync
   ];
 
   services.greetd = {
