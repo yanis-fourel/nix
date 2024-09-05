@@ -60,6 +60,7 @@
 	pkgs.tig
 	pkgs.rclone
 	pkgs.rsync
+    pkgs.gnupg
   ];
 
   services.greetd = {
