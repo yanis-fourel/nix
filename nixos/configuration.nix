@@ -63,6 +63,8 @@
     pkgs.gnupg
   ];
 
+  programs.gnupg.agent.enable = true;
+
   services.greetd = {
     enable = true;
     settings = {
