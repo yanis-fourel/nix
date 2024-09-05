@@ -58,8 +58,8 @@
 	pkgs.wl-clipboard
 	pkgs.fd
 	pkgs.tig
-	pkgs.cryptomator
-	pkgs.megasync
+	pkgs.rclone
+	pkgs.rsync
   ];
 
   services.greetd = {
