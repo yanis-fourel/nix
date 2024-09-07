@@ -69,12 +69,15 @@ with final.pkgs.lib; let
     nvim-ts-context-commentstring # https://github.com/joosepalviste/nvim-ts-context-commentstring/
 
     nvim-unception # Prevent nested neovim sessions | nvim-unception
-	nvim-notify # https://github.com/rcarriga/nvim-notify/
-	vim-sleuth # Detect tabstop and shiftwidth automatically
-	vim-cool # Disables hlsearch when you are done searching and re-enables it when you search again
+    nvim-notify # https://github.com/rcarriga/nvim-notify/
+    vim-sleuth # Detect tabstop and shiftwidth automatically
+    vim-cool # Disables hlsearch when you are done searching and re-enables it when you search again
+    vim-abolish # :S command and more I don't know
 
-	crates-nvim # https://github.com/saecki/crates.nvim/
-	# TODO https://github.com/vxpm/ferris.nvim/
+    conform-nvim # autoformat
+
+    crates-nvim # https://github.com/saecki/crates.nvim/
+    # TODO https://github.com/vxpm/ferris.nvim/
 
     # libraries that other plugins depend on
     sqlite-lua
