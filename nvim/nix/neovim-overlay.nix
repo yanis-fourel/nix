@@ -38,6 +38,18 @@ with final.pkgs.lib; let
     meta.homepage = "https://github.com/folke/lazydev.nvim";
   };
 
+  my-rainbow-csv-nvim = pkgs.vimUtils.buildVimPlugin {
+    pname = "my-rainbow-csv-nvim";
+    version = "2024-07-9";
+    src = pkgs.fetchFromGitHub {
+      owner = "cameron-wags";
+      repo = "rainbow_csv.nvim";
+      rev = "7f3fddfe813641035fac2cdf94c2ff69bb0bf0b9";
+      sha256 = "fd71d077ffacaa155e78c02470a36f143285b8579c0a1ae0a79ea8a77290021b";
+    };
+    meta.homepage = "https://https://github.com/cameron-wags/rainbow_csv.nvim/commits/main/";
+  };
+
   all-plugins = with pkgs.vimPlugins; [
     # https://search.nixos.org/packages?channel=unstable&from=0&size=50&sort=relevance&type=packages&query=vimPlugins
     nvim-treesitter.withAllGrammars
@@ -68,6 +80,7 @@ with final.pkgs.lib; let
     oil-nvim # https://github.com/stevearc/oil.nvim/
     harpoon2 # https://github.com/ThePrimeagen/harpoon/
     mini-nvim # https://github.com/echasnovski/mini.nvim/
+    my-rainbow-csv-nvim
 
     diffview-nvim # https://github.com/sindrets/diffview.nvim/
     neogit # https://github.com/TimUntersberger/neogit/
