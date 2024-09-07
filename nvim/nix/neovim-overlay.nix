@@ -69,6 +69,7 @@ with final.pkgs.lib; let
     nvim-ts-context-commentstring # https://github.com/joosepalviste/nvim-ts-context-commentstring/
 
     nvim-unception # Prevent nested neovim sessions | nvim-unception
+	nvim-notify # https://github.com/rcarriga/nvim-notify/
 
 	crates-nvim # https://github.com/saecki/crates.nvim/
 	# TODO https://github.com/vxpm/ferris.nvim/
