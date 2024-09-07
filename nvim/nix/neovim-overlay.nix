@@ -50,6 +50,8 @@ with final.pkgs.lib; let
     catppuccin-nvim # https://github.com/catppuccin/catppuccin
     dracula-nvim # https://github.com/Mofiqul/dracula.nvim/
 
+    indent-blankline-nvim
+
     luasnip # snippets | https://github.com/l3mon4d3/luasnip/
 	
 
