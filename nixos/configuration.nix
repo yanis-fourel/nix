@@ -7,7 +7,7 @@
   lib,
   pkgs,
   pkgs-unstable,
-  mynvim,
+  fenix,
   ...
 }:
 
@@ -17,8 +17,6 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
   ];
-
-  nixpkgs.overlays = [ mynvim.overlays.default ];
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -62,6 +60,15 @@
     pkgs.rclone
     pkgs.rsync
     pkgs.gnupg
+
+    (fenix.complete.withComponents [
+      "cargo"
+      "clippy"
+      "rust-src"
+      "rustc"
+      "rustfmt"
+    ])
+    pkgs.rust-analyzer-nightly
   ];
 
   programs.gnupg.agent.enable = true;
