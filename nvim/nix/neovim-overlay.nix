@@ -72,7 +72,7 @@ with final.pkgs.lib; let
     telescope-nvim # https://github.com/nvim-telescope/telescope.nvim/
     telescope-fzf-native-nvim
     telescope-ui-select-nvim # https://github.com/nvim-telescope/telescope-ui-select.nvim
-	telescope-file-browser-nvim # https://github.com/nvim-telescope/telescope-file-browser.nvim/
+    telescope-file-browser-nvim # https://github.com/nvim-telescope/telescope-file-browser.nvim/
 
     nvim-treesitter-context # nvim-treesitter-context
 
@@ -109,8 +109,9 @@ with final.pkgs.lib; let
     # language servers, etc.
     lua-language-server
     nil # nix LSP
-	rust-analyzer
-	stylua # lua formatter
+    rust-analyzer
+    rustfmt
+    stylua # lua formatter
   ];
 in {
   # This is the neovim derivation
