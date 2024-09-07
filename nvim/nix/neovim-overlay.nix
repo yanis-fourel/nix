@@ -70,6 +70,8 @@ with final.pkgs.lib; let
 
     nvim-unception # Prevent nested neovim sessions | nvim-unception
 	nvim-notify # https://github.com/rcarriga/nvim-notify/
+	vim-sleuth # Detect tabstop and shiftwidth automatically
+	vim-cool # Disables hlsearch when you are done searching and re-enables it when you search again
 
 	crates-nvim # https://github.com/saecki/crates.nvim/
 	# TODO https://github.com/vxpm/ferris.nvim/
