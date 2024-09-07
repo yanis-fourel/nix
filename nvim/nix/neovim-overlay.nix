@@ -25,11 +25,25 @@ with final.pkgs.lib; let
   #   optional = <true|false>; # Default: false
   #   ...
   # }
+
+  my-lazydev-nvim = pkgs.vimUtils.buildVimPlugin {
+    pname = "my-lazydev-nvim";
+    version = "2024-07-25";
+    src = pkgs.fetchFromGitHub {
+      owner = "folke";
+      repo = "lazydev.nvim";
+      rev = "491452cf1ca6f029e90ad0d0368848fac717c6d2";
+      sha256 = "0f980fdab54f62859cf21b254eb1fb67dd1c13b5c4bbeb5f903e8567363f88f9";
+    };
+    meta.homepage = "https://github.com/folke/lazydev.nvim";
+  };
+
   all-plugins = with pkgs.vimPlugins; [
     # https://search.nixos.org/packages?channel=unstable&from=0&size=50&sort=relevance&type=packages&query=vimPlugins
     nvim-treesitter.withAllGrammars
-	nvim-lspconfig
-	fidget-nvim # https://github.com/j-hui/fidget.nvim/
+    nvim-lspconfig
+    fidget-nvim # https://github.com/j-hui/fidget.nvim/
+    my-lazydev-nvim
 
     gruvbox-nvim # https://github.com/ellisonleao/gruvbox.nvim/
     tokyonight-nvim # https://github.com/folke/tokyonight.nvim/
