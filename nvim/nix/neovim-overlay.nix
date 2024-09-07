@@ -28,6 +28,7 @@ with final.pkgs.lib; let
   all-plugins = with pkgs.vimPlugins; [
     # https://search.nixos.org/packages?channel=unstable&from=0&size=50&sort=relevance&type=packages&query=vimPlugins
     nvim-treesitter.withAllGrammars
+	nvim-lspconfig
 
     gruvbox-nvim # https://github.com/ellisonleao/gruvbox.nvim/
     tokyonight-nvim # https://github.com/folke/tokyonight.nvim/
@@ -83,6 +84,7 @@ with final.pkgs.lib; let
     # language servers, etc.
     lua-language-server
     nil # nix LSP
+	rust-analyzer
   ];
 in {
   # This is the neovim derivation
