@@ -80,7 +80,9 @@ with final.pkgs.lib; let
     oil-nvim # https://github.com/stevearc/oil.nvim/
     harpoon2 # https://github.com/ThePrimeagen/harpoon/
     mini-nvim # https://github.com/echasnovski/mini.nvim/
+    tabular
     my-rainbow-csv-nvim
+    todo-comments-nvim
 
     diffview-nvim # https://github.com/sindrets/diffview.nvim/
     neogit # https://github.com/TimUntersberger/neogit/
