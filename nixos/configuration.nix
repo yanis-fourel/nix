@@ -6,16 +6,12 @@
 
 {
 
-  imports =
-    [
-      # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
-
-  nixpkgs.overlays = [
-    mynvim.overlays.default
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
   ];
 
+  nixpkgs.overlays = [ mynvim.overlays.default ];
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -68,28 +64,28 @@
   services.greetd = {
     enable = true;
     settings = {
-	  initial_session = {
-	    command = "Hyprland";
-		user = "yanis";
-	  };
+      initial_session = {
+        command = "Hyprland";
+        user = "yanis";
+      };
       default_session = {
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --user-menu --cmd Hyprland";
+        command =
+          "${pkgs.greetd.tuigreet}/bin/tuigreet --time --user-menu --cmd Hyprland";
         user = "greeter";
       };
     };
   };
 
   systemd.user.services.megasync = {
-		  enable = true;
-		  after = [ "network.target" ];
-		  wantedBy = [ "default.target" ];
-		  description = "Megasync";
-		  serviceConfig = {
-				  Type = "simple";
-				  ExecStart = ''megasync'';
-		  };
+    enable = true;
+    after = [ "network.target" ];
+    wantedBy = [ "default.target" ];
+    description = "Megasync";
+    serviceConfig = {
+      Type = "simple";
+      ExecStart = "megasync";
+    };
   };
-
 
   # Needed for NVIDIA, might want to only allow unfree NVIDIA
   nixpkgs.config.allowUnfree = true;
@@ -128,7 +124,6 @@
     # accessible via `nvidia-settings`.
     nvidiaSettings = true;
 
-
     prime = {
       offload = {
         enable = true;
@@ -150,7 +145,8 @@
   networking.hostName = "yanix";
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-  networking.networkmanager.enable = true; # Easiest to use and most distros use this by default.
+  networking.networkmanager.enable =
+    true; # Easiest to use and most distros use this by default.
 
   # Set your time zone.
   time.timeZone = "Asia/Taipei";
@@ -179,7 +175,6 @@
     SUDO_EDITOR = "rvim";
   };
 
-
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";
   # services.xserver.xkb.options = "eurosign:e,caps:escape";
@@ -195,20 +190,15 @@
     pulse.enable = true;
   };
 
-
   # Enable touchpad support (enabled default in most desktopManager).
   # services.libinput.enable = true;
-
 
   programs.zsh = {
     enable = true;
     autosuggestions.enable = true;
     ohMyZsh = {
       enable = true;
-      plugins = [
-        "git"
-        "rust"
-      ];
+      plugins = [ "git" "rust" ];
     };
   };
 

@@ -1,6 +1,8 @@
 # This overlay, when applied to nixpkgs, adds the final neovim derivation to nixpkgs.
-{inputs}: final: prev:
-with final.pkgs.lib; let
+{ inputs }:
+final: prev:
+with final.pkgs.lib;
+let
   pkgs = final;
 
   # Use this to create a plugin from a flake input
@@ -33,7 +35,8 @@ with final.pkgs.lib; let
       owner = "folke";
       repo = "lazydev.nvim";
       rev = "491452cf1ca6f029e90ad0d0368848fac717c6d2";
-      sha256 = "0f980fdab54f62859cf21b254eb1fb67dd1c13b5c4bbeb5f903e8567363f88f9";
+      sha256 =
+        "0f980fdab54f62859cf21b254eb1fb67dd1c13b5c4bbeb5f903e8567363f88f9";
     };
     meta.homepage = "https://github.com/folke/lazydev.nvim";
   };
@@ -45,9 +48,11 @@ with final.pkgs.lib; let
       owner = "cameron-wags";
       repo = "rainbow_csv.nvim";
       rev = "7f3fddfe813641035fac2cdf94c2ff69bb0bf0b9";
-      sha256 = "fd71d077ffacaa155e78c02470a36f143285b8579c0a1ae0a79ea8a77290021b";
+      sha256 =
+        "fd71d077ffacaa155e78c02470a36f143285b8579c0a1ae0a79ea8a77290021b";
     };
-    meta.homepage = "https://https://github.com/cameron-wags/rainbow_csv.nvim/commits/main/";
+    meta.homepage =
+      "https://https://github.com/cameron-wags/rainbow_csv.nvim/commits/main/";
   };
 
   all-plugins = with pkgs.vimPlugins; [
@@ -65,7 +70,6 @@ with final.pkgs.lib; let
     indent-blankline-nvim
 
     luasnip # snippets | https://github.com/l3mon4d3/luasnip/
-
 
     nvim-cmp # https://github.com/hrsh7th/nvim-cmp
     cmp_luasnip # snippets autocompletion extension for nvim-cmp | https://github.com/saadparwaiz1/cmp_luasnip/
@@ -144,9 +148,7 @@ in {
   };
 
   # This can be symlinked in the devShell's shellHook
-  nvim-luarc-json = final.mk-luarc-json {
-    plugins = all-plugins;
-  };
+  nvim-luarc-json = final.mk-luarc-json { plugins = all-plugins; };
 
   # You can add as many derivations as you like.
   # Use `ignoreConfigRegexes` to filter out config
