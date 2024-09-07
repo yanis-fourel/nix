@@ -130,6 +130,7 @@ with final.pkgs.lib; let
     # language servers, etc.
     lua-language-server
     nil # nix LSP
+    nixfmt
     rust-analyzer
     rustfmt
     stylua # lua formatter
