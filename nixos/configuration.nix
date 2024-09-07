@@ -43,7 +43,6 @@
     pkgs.nodejs_22
     pkgs.go
     pkgs.cargo
-    pkgs.rust-analyzer
     pkgs.waybar
     pkgs.starship
     pkgs.eza
