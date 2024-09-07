@@ -29,6 +29,7 @@ with final.pkgs.lib; let
     # https://search.nixos.org/packages?channel=unstable&from=0&size=50&sort=relevance&type=packages&query=vimPlugins
     nvim-treesitter.withAllGrammars
 	nvim-lspconfig
+	fidget-nvim # https://github.com/j-hui/fidget.nvim/
 
     gruvbox-nvim # https://github.com/ellisonleao/gruvbox.nvim/
     tokyonight-nvim # https://github.com/folke/tokyonight.nvim/
