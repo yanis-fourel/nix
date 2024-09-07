@@ -83,6 +83,7 @@ with final.pkgs.lib; let
     tabular
     my-rainbow-csv-nvim
     todo-comments-nvim
+    treesj # https://github.com/Wansmer/treesj/
 
     diffview-nvim # https://github.com/sindrets/diffview.nvim/
     neogit # https://github.com/TimUntersberger/neogit/
