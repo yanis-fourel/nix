@@ -64,6 +64,7 @@ with final.pkgs.lib; let
     cmp-cmdline-history # cmp command line history suggestions
 
     oil-nvim # https://github.com/stevearc/oil.nvim/
+    harpoon2 # https://github.com/ThePrimeagen/harpoon/
 
     diffview-nvim # https://github.com/sindrets/diffview.nvim/
     neogit # https://github.com/TimUntersberger/neogit/
