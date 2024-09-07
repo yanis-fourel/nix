@@ -36,6 +36,7 @@ with final.pkgs.lib; let
     dracula-nvim # https://github.com/Mofiqul/dracula.nvim/
 
     luasnip # snippets | https://github.com/l3mon4d3/luasnip/
+	
 
     nvim-cmp # https://github.com/hrsh7th/nvim-cmp
     cmp_luasnip # snippets autocompletion extension for nvim-cmp | https://github.com/saadparwaiz1/cmp_luasnip/
@@ -68,6 +69,9 @@ with final.pkgs.lib; let
 
     nvim-unception # Prevent nested neovim sessions | nvim-unception
 
+	crates-nvim # https://github.com/saecki/crates.nvim/
+	# TODO https://github.com/vxpm/ferris.nvim/
+
     # libraries that other plugins depend on
     sqlite-lua
     plenary-nvim
@@ -85,6 +89,7 @@ with final.pkgs.lib; let
     lua-language-server
     nil # nix LSP
 	rust-analyzer
+	stylua # lua formatter
   ];
 in {
   # This is the neovim derivation
