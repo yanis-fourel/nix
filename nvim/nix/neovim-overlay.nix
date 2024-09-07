@@ -77,17 +77,12 @@ with final.pkgs.lib; let
     cmp-cmdline # cmp command line suggestions
     cmp-cmdline-history # cmp command line history suggestions
 
-    oil-nvim # https://github.com/stevearc/oil.nvim/
-    harpoon2 # https://github.com/ThePrimeagen/harpoon/
-    mini-nvim # https://github.com/echasnovski/mini.nvim/
-    tabular
-    my-rainbow-csv-nvim
-    todo-comments-nvim
-    treesj # https://github.com/Wansmer/treesj/
-
     diffview-nvim # https://github.com/sindrets/diffview.nvim/
     neogit # https://github.com/TimUntersberger/neogit/
     gitsigns-nvim # https://github.com/lewis6991/gitsigns.nvim/
+
+    oil-nvim # https://github.com/stevearc/oil.nvim/
+    harpoon2 # https://github.com/ThePrimeagen/harpoon/
 
     telescope-nvim # https://github.com/nvim-telescope/telescope.nvim/
     telescope-fzf-native-nvim
@@ -107,6 +102,12 @@ with final.pkgs.lib; let
     vim-sleuth # Detect tabstop and shiftwidth automatically
     vim-cool # Disables hlsearch when you are done searching and re-enables it when you search again
     vim-abolish # :S command and more I don't know
+    mini-nvim # https://github.com/echasnovski/mini.nvim/
+    tabular
+    my-rainbow-csv-nvim
+    todo-comments-nvim
+    treesj # https://github.com/Wansmer/treesj/
+    undotree
 
     conform-nvim # autoformat
 
