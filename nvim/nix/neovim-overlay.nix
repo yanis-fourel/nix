@@ -53,7 +53,7 @@ with final.pkgs.lib; let
     indent-blankline-nvim
 
     luasnip # snippets | https://github.com/l3mon4d3/luasnip/
-	
+
 
     nvim-cmp # https://github.com/hrsh7th/nvim-cmp
     cmp_luasnip # snippets autocompletion extension for nvim-cmp | https://github.com/saadparwaiz1/cmp_luasnip/
@@ -67,6 +67,7 @@ with final.pkgs.lib; let
 
     oil-nvim # https://github.com/stevearc/oil.nvim/
     harpoon2 # https://github.com/ThePrimeagen/harpoon/
+    mini-nvim # https://github.com/echasnovski/mini.nvim/
 
     diffview-nvim # https://github.com/sindrets/diffview.nvim/
     neogit # https://github.com/TimUntersberger/neogit/
