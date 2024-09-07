@@ -1,6 +1,5 @@
 local ok, retval = pcall(require("fidget").setup)
-if not ok
-then
+if not ok then
 	vim.notify("error calling fidget.setup: " .. retval, 1, {})
 end
 
@@ -42,20 +41,21 @@ vim.api.nvim_create_autocmd("LspAttach", {
 	end,
 })
 
+require("lspconfig").rust_analyzer.setup({
+	capabilities = require("user.lsp").make_client_capabilities(),
+	settings = {
+		["rust-analyzer"] = {
+			diagnostics = {
+				enable = true,
+			},
+		},
+	},
+})
 
+require("lspconfig").lua_ls.setup({
+	capabilities = require("user.lsp").make_client_capabilities(),
+})
 
-require("lspconfig").rust_analyzer.setup{
-  capabilities = require('user.lsp').make_client_capabilities(),
-  settings = {
-    ['rust-analyzer'] = {
-      diagnostics = {
-        enable = false;
-      }
-    }
-  }
-}
-
-require("lspconfig").lua_ls.setup{
-  capabilities = require('user.lsp').make_client_capabilities(),
-}
-
+require("lspconfig").nil_ls.setup({
+	capabilities = require("user.lsp").make_client_capabilities(),
+})
