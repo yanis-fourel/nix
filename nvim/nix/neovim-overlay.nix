@@ -134,7 +134,7 @@ let
     # language servers, etc.
     lua-language-server
     nil # nix LSP
-    nixfmt
+    nixfmt-rfc-style
     rust-analyzer
     rustfmt
     stylua # lua formatter
