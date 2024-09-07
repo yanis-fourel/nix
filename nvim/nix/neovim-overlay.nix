@@ -133,6 +133,7 @@ let
     lua-language-server
     nil # nix LSP
     nixfmt-rfc-style
+    cargo
     rust-analyzer
     rustfmt
     clippy

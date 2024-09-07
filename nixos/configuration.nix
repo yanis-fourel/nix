@@ -2,7 +2,14 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, lib, pkgs, pkgs-unstable, mynvim, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  pkgs-unstable,
+  mynvim,
+  ...
+}:
 
 {
 
@@ -42,7 +49,6 @@
     pkgs.python3
     pkgs.nodejs_22
     pkgs.go
-    pkgs.cargo
     pkgs.waybar
     pkgs.starship
     pkgs.eza
@@ -68,8 +74,7 @@
         user = "yanis";
       };
       default_session = {
-        command =
-          "${pkgs.greetd.tuigreet}/bin/tuigreet --time --user-menu --cmd Hyprland";
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --user-menu --cmd Hyprland";
         user = "greeter";
       };
     };
@@ -89,7 +94,9 @@
   # Needed for NVIDIA, might want to only allow unfree NVIDIA
   nixpkgs.config.allowUnfree = true;
 
-  hardware.opengl = { enable = true; };
+  hardware.opengl = {
+    enable = true;
+  };
 
   # Load nvidia driver for Xorg and Wayland
   services.xserver.videoDrivers = [ "nvidia" ];
@@ -144,8 +151,7 @@
   networking.hostName = "yanix";
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-  networking.networkmanager.enable =
-    true; # Easiest to use and most distros use this by default.
+  networking.networkmanager.enable = true; # Easiest to use and most distros use this by default.
 
   # Set your time zone.
   time.timeZone = "Asia/Taipei";
@@ -197,7 +203,10 @@
     autosuggestions.enable = true;
     ohMyZsh = {
       enable = true;
-      plugins = [ "git" "rust" ];
+      plugins = [
+        "git"
+        "rust"
+      ];
     };
   };
 
@@ -248,6 +257,8 @@
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
   system.stateVersion = "24.05"; # Did you read the comment?
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 }
-
