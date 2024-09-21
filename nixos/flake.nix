@@ -7,21 +7,19 @@
     mynvim.url = "path:../nvim/";
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, mynvim, ... }:
+  outputs =
+    { nixpkgs, nixpkgs-unstable, ... }@inputs:
     let
       system = "x86_64-linux";
-      lib = nixpkgs.lib;
-      pkgs = nixpkgs.legacyPackages.${system};
-      pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
-    in {
+    in
+    {
       nixosConfigurations = {
-        yanix = lib.nixosSystem {
-          modules = [ ./configuration.nix ];
-          extraArgs = {
+        yanix = nixpkgs.lib.nixosSystem {
+          specialArgs = {
             inherit system;
-            inherit mynvim;
-            inherit pkgs-unstable;
+            inherit inputs;
           };
+          modules = [ ./configuration.nix ];
         };
       };
     };

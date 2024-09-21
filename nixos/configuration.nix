@@ -4,10 +4,8 @@
 
 {
   config,
-  lib,
   pkgs,
-  pkgs-unstable,
-  mynvim,
+  inputs,
   ...
 }:
 
@@ -18,7 +16,7 @@
     ./hardware-configuration.nix
   ];
 
-  nixpkgs.overlays = [ mynvim.overlays.default ];
+  nixpkgs.overlays = [ inputs.mynvim.overlays.default ];
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
