@@ -135,6 +135,7 @@ let
     nixfmt-rfc-style
     cargo
     rustc
+    rust-analyzer
     stylua # lua formatter
   ];
 in
