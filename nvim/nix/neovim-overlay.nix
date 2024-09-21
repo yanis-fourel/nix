@@ -133,7 +133,8 @@ let
     lua-language-server
     nil # nix LSP
     nixfmt-rfc-style
-    rustup # contains rust-analyzer, rustfmt, cargo-clippy
+    cargo
+    rustc
     stylua # lua formatter
   ];
 in
