@@ -61,6 +61,7 @@
     pkgs.rsync
     pkgs.gnupg
     pkgs.nix-search-cli
+    pkgs.cachix
   ];
 
   programs.gnupg.agent.enable = true;
