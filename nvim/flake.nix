@@ -15,13 +15,13 @@
   };
 
   outputs =
-    inputs@{
+    {
       self,
       nixpkgs,
       flake-utils,
       gen-luarc,
       ...
-    }:
+    }@inputs:
     let
       supportedSystems = [
         "x86_64-linux"

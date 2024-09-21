@@ -16,7 +16,10 @@
     ./hardware-configuration.nix
   ];
 
-  nixpkgs.overlays = [ inputs.mynvim.overlays.default ];
+  nixpkgs.overlays = [
+    inputs.fenix.overlays.default
+    inputs.mynvim.overlays.default
+  ];
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -62,6 +65,14 @@
     pkgs.gnupg
     pkgs.nix-search-cli
     pkgs.cachix
+    (pkgs.fenix.complete.withComponents [
+      "cargo"
+      "clippy"
+      "rust-src"
+      "rustc"
+      "rustfmt"
+    ])
+    pkgs.rust-analyzer-nightly
   ];
 
   programs.gnupg.agent.enable = true;
