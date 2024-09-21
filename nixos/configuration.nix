@@ -60,6 +60,7 @@
     pkgs.rclone
     pkgs.rsync
     pkgs.gnupg
+    pkgs.nix-search-cli
   ];
 
   programs.gnupg.agent.enable = true;
