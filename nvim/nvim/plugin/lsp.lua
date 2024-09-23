@@ -41,6 +41,17 @@ vim.api.nvim_create_autocmd("LspAttach", {
 	end,
 })
 
+require("lspconfig.ui.windows").default_options.border = require("user.preference").border_style
+vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+	border = require("user.preference").border_style,
+})
+vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
+	border = require("user.preference").border_style,
+})
+vim.diagnostic.config({
+	float = { border = require("user.preference").border_style },
+})
+
 require("lspconfig").rust_analyzer.setup({
 	capabilities = require("user.lsp").make_client_capabilities(),
 	settings = {
