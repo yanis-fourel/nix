@@ -167,11 +167,11 @@
       "locked": {
         "lastModified": 1,
         "narHash": "sha256-EPvBb9f0QpFnkxb2WqrkIkjOkomB5W2qdLxUdHy5MGU=",
-        "path": "../nvim/",
+        "path": "./nvim/",
         "type": "path"
       },
       "original": {
-        "path": "../nvim/",
+        "path": "./nvim/",
         "type": "path"
       }
     },

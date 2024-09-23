@@ -4,7 +4,7 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-24.05";
     nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
-    mynvim.url = "path:../nvim/";
+    mynvim.url = "path:./nvim/";
 
     # rust toolchain
     fenix = {
@@ -22,15 +22,16 @@
     }@inputs:
     let
       system = "x86_64-linux";
+      host = "yanix";
     in
     {
       packages.x86_64-linux.default = fenix.packages.x86_64-linux.minimal.toolchain;
-      nixosConfigurations.yanix = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.${host} = nixpkgs.lib.nixosSystem {
         specialArgs = {
           inherit system;
           inherit inputs;
         };
-        modules = [ ./configuration.nix ];
+        modules = [ ./hosts/${host}/config.nix ];
       };
     };
 }
