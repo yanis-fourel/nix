@@ -134,6 +134,7 @@ let
     nil # nix LSP
     nixfmt-rfc-style
     stylua # lua formatter
+    gopls
   ];
 in
 {

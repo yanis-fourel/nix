@@ -52,6 +52,10 @@ require("lspconfig").rust_analyzer.setup({
 	},
 })
 
+require("lspconfig").gopls.setup({
+	capabilities = require("user.lsp").make_client_capabilities(),
+})
+
 require("lspconfig").lua_ls.setup({
 	capabilities = require("user.lsp").make_client_capabilities(),
 })
