@@ -68,6 +68,12 @@
     pkgs.rust-analyzer-nightly
   ];
 
+  fonts.packages = [
+    pkgs.noto-fonts
+    pkgs.noto-fonts-cjk
+    pkgs.noto-fonts-emoji
+  ];
+
   programs.gnupg.agent.enable = true;
 
   services.greetd = {
