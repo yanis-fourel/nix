@@ -66,6 +66,8 @@
       "rustfmt"
     ])
     pkgs.rust-analyzer-nightly
+    pkgs.file
+    pkgs.openai-whisper
   ];
 
   fonts.packages = [
