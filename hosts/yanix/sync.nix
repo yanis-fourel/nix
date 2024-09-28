@@ -1,11 +1,19 @@
-{ lib, ... }:
+{ config, lib, ... }:
+let
+  cfg = config.services.sync;
+in
 {
-  options.services.sync.enabled = lib.mkOption {
-    type = lib.types.boolean;
-    default = false;
+  options.services.sync = {
+    enabled = lib.mkOption {
+      type = lib.types.bool;
+      default = false;
+      description = ''
+        Whether to enable sync.
+      '';
+    };
   };
 
-  config = {
+  config = lib.mkIf cfg.enabled {
     # This requires manually creating the /etc/davfs2/secrets file like:
     # https://u425237.your-storagebox.de  <username>  <password>
     services.davfs2.enable = true;
