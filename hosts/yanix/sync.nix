@@ -1,4 +1,4 @@
-{ config, lib }:
+{ lib, ... }:
 {
   options.services.sync.enabled = lib.mkOption {
     type = lib.types.boolean;
