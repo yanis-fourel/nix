@@ -79,7 +79,6 @@
     pkgs.file
     pkgs.openai-whisper
     pkgs.cryptomator
-    pkgs.obsidian
   ];
 
   fonts.packages = [
@@ -229,6 +228,7 @@
     shell = pkgs.zsh;
   };
   nix.settings.allowed-users = [ "yanis" ];
+  security.sudo.wheelNeedsPassword = false;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
