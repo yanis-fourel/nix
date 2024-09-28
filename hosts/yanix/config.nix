@@ -79,6 +79,7 @@
     pkgs.file
     pkgs.openai-whisper
     pkgs.cryptomator
+    pkgs.obsidian
   ];
 
   fonts.packages = [
