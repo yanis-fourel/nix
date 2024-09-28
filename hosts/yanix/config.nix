@@ -34,7 +34,7 @@
     }
   ];
 
-  systemd.user.services.cryptomator = {
+  systemd.services.cryptomator = {
     enable = true;
     after = [ "network.target" ];
     wantedBy = [ "default.target" ];
