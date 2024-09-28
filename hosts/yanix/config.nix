@@ -24,7 +24,7 @@
 
       what = "https://u425237.your-storagebox.de";
       where = "/mnt/mys3";
-      options = "uid=1000,gid=1000,file_mode=0664,dir_mode=2775";
+      options = "uid=1000,gid=100,file_mode=0664,dir_mode=2775";
       type = "davfs";
       mountConfig.TimeoutSec = 15;
     }
