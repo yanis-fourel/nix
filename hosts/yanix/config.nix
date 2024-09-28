@@ -26,7 +26,6 @@
       mountConfig.TimeoutSec = 15;
     }
   ];
-
   systemd.automounts = [
     {
       description = "Automount for 'sync' webdav mount point";
@@ -34,6 +33,17 @@
       wantedBy = [ "multi-user.target" ];
     }
   ];
+
+  systemd.user.services.cryptomator = {
+    enable = true;
+    after = [ "network.target" ];
+    wantedBy = [ "default.target" ];
+    description = "Cryptomator";
+    serviceConfig = {
+      Type = "simple";
+      ExecStart = "cryptomator";
+    };
+  };
 
   nixpkgs.overlays = [
     inputs.fenix.overlays.default
@@ -116,17 +126,6 @@
         command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --user-menu --cmd Hyprland";
         user = "greeter";
       };
-    };
-  };
-
-  systemd.user.services.megasync = {
-    enable = true;
-    after = [ "network.target" ];
-    wantedBy = [ "default.target" ];
-    description = "Megasync";
-    serviceConfig = {
-      Type = "simple";
-      ExecStart = "megasync";
     };
   };
 
