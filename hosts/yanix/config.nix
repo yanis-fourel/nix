@@ -73,6 +73,7 @@
     pkgs.rust-analyzer-nightly
     pkgs.file
     pkgs.openai-whisper
+    pkgs.cryptomator
   ];
 
   fonts.packages = [
