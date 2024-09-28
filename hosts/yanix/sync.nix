@@ -4,7 +4,7 @@ let
 in
 {
   options.services.sync = {
-    enabled = lib.mkOption {
+    enable = lib.mkOption {
       type = lib.types.bool;
       default = false;
       description = ''
@@ -13,7 +13,7 @@ in
     };
   };
 
-  config = lib.mkIf cfg.enabled {
+  config = lib.mkIf cfg.enable {
     # This requires manually creating the /etc/davfs2/secrets file like:
     # https://u425237.your-storagebox.de  <username>  <password>
     services.davfs2.enable = true;

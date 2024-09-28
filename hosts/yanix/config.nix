@@ -16,6 +16,9 @@
   hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
   services.blueman.enable = true;
 
+  # my custom sync service
+  services.sync.enable = true;
+
   nixpkgs.overlays = [
     inputs.fenix.overlays.default
     inputs.mynvim.overlays.default
