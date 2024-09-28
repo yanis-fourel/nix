@@ -80,7 +80,6 @@
     pkgs.openai-whisper
     pkgs.cryptomator
     pkgs.obsidian
-    pkgs.opentabletdriver
   ];
 
   fonts.packages = [
@@ -104,6 +103,8 @@
       };
     };
   };
+
+  hardware.opentabletdriver.enable = true;
 
   # Needed for NVIDIA, might want to only allow unfree NVIDIA
   nixpkgs.config.allowUnfree = true;
