@@ -80,6 +80,7 @@
     pkgs.openai-whisper
     pkgs.cryptomator
     pkgs.obsidian
+    pkgs.opentabletdriver
   ];
 
   fonts.packages = [
