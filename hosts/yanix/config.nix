@@ -19,14 +19,19 @@
     {
       enable = true;
       description = "'sync' webdav mount point";
-      after = [ "network-online.target" ];
-      wants = [ "network-online.target" ];
-
       what = "https://u425237.your-storagebox.de";
       where = "/mnt/mys3";
       options = "uid=1000,gid=100,file_mode=0664,dir_mode=2775";
       type = "davfs";
       mountConfig.TimeoutSec = 15;
+    }
+  ];
+
+  systemd.automounts = [
+    {
+      description = "Automount for 'sync' webdav mount point";
+      where = "/mnt/mys3";
+      wantedBy = [ "multi-user.target" ];
     }
   ];
 
