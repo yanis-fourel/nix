@@ -40,8 +40,7 @@
     wantedBy = [ "default.target" ];
     description = "Cryptomator";
     serviceConfig = {
-      Type = "simple";
-      ExecStart = "cryptomator";
+      ExecStart = "${pkgs.cryptomator}/bin/cryptomator";
     };
   };
 
