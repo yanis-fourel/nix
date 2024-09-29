@@ -80,6 +80,7 @@
     pkgs.cryptomator
     pkgs.obsidian
     pkgs.tofi
+    pkgs.xsettingsd
   ];
 
   system.activationScripts = {
@@ -195,7 +196,7 @@
   # Hints electron apps to use wayland
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
-  environment.sessionVariables = rec {
+  environment.sessionVariables = {
     VISUAL = "vim";
     SUDO_EDITOR = "rvim";
   };
