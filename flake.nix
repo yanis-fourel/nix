@@ -2,7 +2,7 @@
   description = "Yanis system";
 
   inputs = {
-    nixpkgs.url = "nixpkgs/nixos-24.05";
+    nixpkgs.url = "nixpkgs/nixos-unstable";
     nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
     mynvim.url = "path:./nvim/";
 
