@@ -83,7 +83,7 @@
   ];
 
   system.activationScripts = {
-    cleartoficache.text = "rm /home/yanis/.cache/tofi-drun"; # https://github.com/philj56/tofi/issues/115
+    cleartoficache.text = "rm -f /home/yanis/.cache/tofi-drun"; # https://github.com/philj56/tofi/issues/115
   };
 
   fonts.packages = [
