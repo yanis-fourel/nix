@@ -194,6 +194,7 @@
   programs.hyprland.enable = true;
   # Hints electron apps to use wayland
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
+  # TODO: hyprcursor https://gitlab.com/Pummelfisch/future-cyan-hyprcursor
 
   environment.sessionVariables = {
     VISUAL = "vim";
