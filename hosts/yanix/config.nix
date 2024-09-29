@@ -80,7 +80,6 @@
     pkgs.cryptomator
     pkgs.obsidian
     pkgs.tofi
-    pkgs.xsettingsd
   ];
 
   system.activationScripts = {
