@@ -80,6 +80,7 @@
     pkgs.cryptomator
     pkgs.obsidian
     pkgs.tofi
+    pkgs.libreoffice
   ];
 
   system.activationScripts = {

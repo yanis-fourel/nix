@@ -1,0 +1,2 @@
+- Switch main shell to fish, or zsh without ohmyzsh
+- Set /bin/sh to dash, because it's faster
