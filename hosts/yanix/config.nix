@@ -81,6 +81,7 @@
     pkgs.obsidian
     pkgs.tofi
     pkgs.libreoffice
+    pkgs.okular
   ];
 
   system.activationScripts = {
