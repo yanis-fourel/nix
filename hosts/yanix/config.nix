@@ -82,6 +82,7 @@
     pkgs.tofi
     pkgs.libreoffice
     pkgs.okular
+    pkgs.gimp
   ];
 
   system.activationScripts = {
