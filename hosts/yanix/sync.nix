@@ -16,7 +16,15 @@ in
   config = lib.mkIf cfg.enable {
     # This requires manually creating the /etc/davfs2/secrets file like:
     # https://u425237.your-storagebox.de  <username>  <password>
-    services.davfs2.enable = true;
+    services.davfs2 = {
+      enable = true;
+      settings = {
+        globalSection = {
+          cache_size = 10240; # 10Gib
+        };
+      };
+    };
+
     systemd.mounts = [
       {
         enable = true;
