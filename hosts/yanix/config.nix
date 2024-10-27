@@ -117,7 +117,7 @@
   # Needed for NVIDIA, might want to only allow unfree NVIDIA
   nixpkgs.config.allowUnfree = true;
 
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
   };
 
