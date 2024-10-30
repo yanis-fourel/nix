@@ -8,7 +8,4 @@
     ];
     symbolsFile = /home/yanis/nixos/qwerty-fr;
   };
-  services.xserver.xkb = {
-    layout = "qwerty-fr";
-  };
 }
