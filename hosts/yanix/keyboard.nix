@@ -1,0 +1,6 @@
+{ ... }:
+{
+  services.xserver = {
+    layout = "fr";
+  };
+}

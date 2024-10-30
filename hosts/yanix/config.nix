@@ -10,6 +10,7 @@
   imports = [
     ./hardware.nix
     ./sync.nix
+    ./keyboard.nix
   ];
 
   hardware.bluetooth.enable = true;
