@@ -4,7 +4,9 @@
   inputs,
   ...
 }:
-
+let
+  xkb-qwerty-fr = pkgs.callPackage ../../qwerty-fr { };
+in
 {
 
   imports = [
@@ -84,6 +86,7 @@
     pkgs.libreoffice
     pkgs.okular
     pkgs.gimp
+    xkb-qwerty-fr
   ];
 
   system.activationScripts = {
