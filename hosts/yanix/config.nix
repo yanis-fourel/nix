@@ -5,7 +5,6 @@
   ...
 }:
 let
-  # xkb-qwerty-fr = inputs.xkb-qwerty-fr.packages.x86_64-linux.xkb-qwerty-fr;
   xkb-qwerty-fr = pkgs.callPackage ../../qwerty-fr { };
 in
 {
