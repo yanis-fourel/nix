@@ -14,8 +14,8 @@ stdenv.mkDerivation {
   unpackPhase = ":";
 
   installPhase = ''
-    mkdir -p $out/share/X11/xkb/symbols
-    cp $src $out/share/X11/xkb/symbols/qwerty-fr
+    mkdir -p $out/usr/share/X11/xkb/symbols
+    cp $src $out/usr/share/X11/xkb/symbols/us_qwerty-fr
   '';
 
   meta = with lib; {
