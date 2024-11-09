@@ -5,6 +5,7 @@
     nixpkgs.url = "nixpkgs/nixos-unstable";
     nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
     mynvim.url = "path:./nvim/";
+    xkb-qwerty-fr.url = "path:./qwerty-fr/";
 
     # rust toolchain
     fenix = {

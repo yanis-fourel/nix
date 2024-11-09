@@ -265,12 +265,25 @@
         "type": "indirect"
       }
     },
+    "nixpkgs_4": {
+      "locked": {
+        "lastModified": 0,
+        "narHash": "sha256-J+PeFKSDV+pHL7ukkfpVzCOO7mBSrrpJ3svwBFABbhI=",
+        "path": "/nix/store/fpivx4sjcp2vk4rp9nhliln5cwcp3kc6-source",
+        "type": "path"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "type": "indirect"
+      }
+    },
     "root": {
       "inputs": {
         "fenix": "fenix",
         "mynvim": "mynvim",
         "nixpkgs": "nixpkgs_3",
-        "nixpkgs-unstable": "nixpkgs-unstable"
+        "nixpkgs-unstable": "nixpkgs-unstable",
+        "xkb-qwerty-fr": "xkb-qwerty-fr"
       }
     },
     "rust-analyzer-src": {
@@ -303,6 +316,21 @@
         "owner": "nix-systems",
         "repo": "default",
         "type": "github"
+      }
+    },
+    "xkb-qwerty-fr": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_4"
+      },
+      "locked": {
+        "lastModified": 1,
+        "narHash": "sha256-SeMzGqFXTvlQmxw/mlt3I91d848kQaSmXSzX7tS2NTw=",
+        "path": "./qwerty-fr/",
+        "type": "path"
+      },
+      "original": {
+        "path": "./qwerty-fr/",
+        "type": "path"
       }
     }
   },
