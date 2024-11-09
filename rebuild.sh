@@ -3,7 +3,7 @@
 set -e
 pushd ~/nixos/
 git add .
-sudo nix flake lock --update-input mynvim
+sudo nix flake lock --update-input mynvim --update-input xkb-qwerty-fr
 echo "NixOS Rebuilding..."
 sudo nixos-rebuild --flake . switch # || (cat nixos-switch.log | grep --color error && false)
 gen=$(nixos-rebuild list-generations | grep current)

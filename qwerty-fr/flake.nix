@@ -2,7 +2,7 @@
   description = "Keyboard layout based on the QWERTY layout with extra symbols and diacritics so that typing both in French and English is easy and fast. It is also easy to learn!";
 
   inputs = {
-    nixpkgs.url = "nixpkgs";
+    nixpkgs.url = "nixpkgs/nixos-unstable";
   };
 
   outputs =

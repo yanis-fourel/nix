@@ -267,13 +267,16 @@
     },
     "nixpkgs_4": {
       "locked": {
-        "lastModified": 0,
-        "narHash": "sha256-J+PeFKSDV+pHL7ukkfpVzCOO7mBSrrpJ3svwBFABbhI=",
-        "path": "/nix/store/fpivx4sjcp2vk4rp9nhliln5cwcp3kc6-source",
-        "type": "path"
+        "lastModified": 1730785428,
+        "narHash": "sha256-Zwl8YgTVJTEum+L+0zVAWvXAGbWAuXHax3KzuejaDyo=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "4aa36568d413aca0ea84a1684d2d46f55dbabad7",
+        "type": "github"
       },
       "original": {
         "id": "nixpkgs",
+        "ref": "nixos-unstable",
         "type": "indirect"
       }
     },
@@ -324,7 +327,7 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-SeMzGqFXTvlQmxw/mlt3I91d848kQaSmXSzX7tS2NTw=",
+        "narHash": "sha256-sEZ9LIR/0bLiiCzTaLgG/aUSGBmGn/CMdivlJ1Zyw6I=",
         "path": "./qwerty-fr/",
         "type": "path"
       },
