@@ -265,28 +265,12 @@
         "type": "indirect"
       }
     },
-    "nixpkgs_4": {
-      "locked": {
-        "lastModified": 1730785428,
-        "narHash": "sha256-Zwl8YgTVJTEum+L+0zVAWvXAGbWAuXHax3KzuejaDyo=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "4aa36568d413aca0ea84a1684d2d46f55dbabad7",
-        "type": "github"
-      },
-      "original": {
-        "id": "nixpkgs",
-        "ref": "nixos-unstable",
-        "type": "indirect"
-      }
-    },
     "root": {
       "inputs": {
         "fenix": "fenix",
         "mynvim": "mynvim",
         "nixpkgs": "nixpkgs_3",
-        "nixpkgs-unstable": "nixpkgs-unstable",
-        "xkb-qwerty-fr": "xkb-qwerty-fr"
+        "nixpkgs-unstable": "nixpkgs-unstable"
       }
     },
     "rust-analyzer-src": {
@@ -319,21 +303,6 @@
         "owner": "nix-systems",
         "repo": "default",
         "type": "github"
-      }
-    },
-    "xkb-qwerty-fr": {
-      "inputs": {
-        "nixpkgs": "nixpkgs_4"
-      },
-      "locked": {
-        "lastModified": 1,
-        "narHash": "sha256-sEZ9LIR/0bLiiCzTaLgG/aUSGBmGn/CMdivlJ1Zyw6I=",
-        "path": "./qwerty-fr/",
-        "type": "path"
-      },
-      "original": {
-        "path": "./qwerty-fr/",
-        "type": "path"
       }
     }
   },
