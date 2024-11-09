@@ -83,7 +83,8 @@
     pkgs.libreoffice
     pkgs.okular
     pkgs.gimp
-    # inputs.xkb-qwerty-fr
+    inputs.xkb-qwerty-fr
+    # inputs.custom-xkb-layout.packages.${pkgs.system}.custom-xkb-layout;
   ];
 
   system.activationScripts = {
