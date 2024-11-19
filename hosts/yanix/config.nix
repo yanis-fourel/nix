@@ -87,6 +87,7 @@ in
     pkgs.okular
     pkgs.gimp
     xkb-qwerty-fr
+    pkgs.i3
   ];
 
   system.activationScripts = {
@@ -105,7 +106,8 @@ in
     enable = true;
     settings = {
       initial_session = {
-        command = "Hyprland";
+        # command = "Hyprland";
+        command = "i3";
         user = "yanis";
       };
       default_session = {
