@@ -88,6 +88,7 @@ in
     pkgs.gimp
     xkb-qwerty-fr
     pkgs.i3
+    pkgs.lmms
   ];
 
   system.activationScripts = {
