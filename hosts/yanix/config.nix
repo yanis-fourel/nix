@@ -89,6 +89,7 @@ in
     xkb-qwerty-fr
     pkgs.i3
     pkgs.lmms
+    pkgs.gammastep
   ];
 
   system.activationScripts = {
