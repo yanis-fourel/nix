@@ -1,14 +1,11 @@
 {
   lib,
   stdenv,
-  xkeyboard_config,
 }:
 
 stdenv.mkDerivation {
   name = "xkb-qwerty-fr";
   src = ./qwerty-fr.xkb;
-
-  buildInputs = [ xkeyboard_config ];
 
   # Override the unpack phase since this is a plain file, not an archive
   unpackPhase = ":";

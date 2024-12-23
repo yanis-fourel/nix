@@ -2,6 +2,7 @@
   config,
   pkgs,
   inputs,
+  lib,
   ...
 }:
 let
@@ -108,8 +109,7 @@ in
     enable = true;
     settings = {
       initial_session = {
-        # command = "Hyprland";
-        command = "i3";
+        command = "Hyprland";
         user = "yanis";
       };
       default_session = {
@@ -205,6 +205,7 @@ in
   programs.hyprland.enable = true;
   # Hints electron apps to use wayland
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
+  environment.sessionVariables.XKB_CONFIG_EXTRA_PATH = lib.mkBefore ''${xkb-qwerty-fr}/usr/share/X11/xkb'';
   # TODO: hyprcursor https://gitlab.com/Pummelfisch/future-cyan-hyprcursor
 
   environment.sessionVariables = {
