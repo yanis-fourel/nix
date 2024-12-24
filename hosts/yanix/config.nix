@@ -9,7 +9,16 @@
     ./hardware.nix
     ./sync.nix
     ../../modules/keyboard.nix
+    ../../modules/shell.nix
   ];
+
+  users.users.yanis = {
+    isNormalUser = true;
+    extraGroups = [ "wheel" ];
+    shell = pkgs.zsh;
+  };
+  nix.settings.allowed-users = [ "yanis" ];
+  security.sudo.wheelNeedsPassword = false;
 
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
@@ -223,26 +232,6 @@
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.libinput.enable = true;
-
-  programs.zsh = {
-    enable = true;
-    autosuggestions.enable = true;
-    ohMyZsh = {
-      enable = true;
-      plugins = [
-        "git"
-        "rust"
-      ];
-    };
-  };
-
-  users.users.yanis = {
-    isNormalUser = true;
-    extraGroups = [ "wheel" ];
-    shell = pkgs.zsh;
-  };
-  nix.settings.allowed-users = [ "yanis" ];
-  security.sudo.wheelNeedsPassword = false;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
