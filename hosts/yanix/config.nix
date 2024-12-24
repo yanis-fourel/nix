@@ -15,7 +15,7 @@
   users.users.yanis = {
     isNormalUser = true;
     extraGroups = [ "wheel" ];
-    shell = pkgs.zsh;
+    shell = pkgs.nushell;
   };
   nix.settings.allowed-users = [ "yanis" ];
   security.sudo.wheelNeedsPassword = false;
