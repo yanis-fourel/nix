@@ -2,18 +2,13 @@
   config,
   pkgs,
   inputs,
-  lib,
   ...
 }:
-let
-  xkb-qwerty-fr = pkgs.callPackage ../../qwerty-fr { };
-in
 {
-
   imports = [
     ./hardware.nix
     ./sync.nix
-    ./keyboard.nix
+    ../../modules/keyboard.nix
   ];
 
   hardware.bluetooth.enable = true;
@@ -87,7 +82,6 @@ in
     pkgs.libreoffice
     pkgs.okular
     pkgs.gimp
-    xkb-qwerty-fr
     pkgs.i3
     pkgs.lmms
     pkgs.gammastep
@@ -205,7 +199,6 @@ in
   programs.hyprland.enable = true;
   # Hints electron apps to use wayland
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
-  environment.sessionVariables.XKB_CONFIG_EXTRA_PATH = lib.mkBefore ''${xkb-qwerty-fr}/usr/share/X11/xkb'';
   # TODO: hyprcursor https://gitlab.com/Pummelfisch/future-cyan-hyprcursor
 
   environment.sessionVariables = {

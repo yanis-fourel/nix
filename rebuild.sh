@@ -5,6 +5,7 @@ pushd ~/nixos/
 git add .
 nix flake update mynvim
 sudo nix flake lock
+git add .
 echo "NixOS Rebuilding..."
 sudo nixos-rebuild --flake . switch # || (cat nixos-switch.log | grep --color error && false)
 gen=$(nixos-rebuild list-generations | grep current)
