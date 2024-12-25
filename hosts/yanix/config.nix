@@ -61,8 +61,6 @@
     pkgs.nodejs_22
     pkgs.go
     pkgs.waybar
-    pkgs.starship
-    pkgs.eza
     pkgs.man
     pkgs.man-pages
     pkgs.brightnessctl
@@ -211,7 +209,8 @@
   # TODO: hyprcursor https://gitlab.com/Pummelfisch/future-cyan-hyprcursor
 
   environment.sessionVariables = {
-    VISUAL = "vim";
+    VISUAL = "nvim";
+    EDITOR = "nvim";
     SUDO_EDITOR = "rvim";
   };
 

@@ -14,5 +14,7 @@
 
   environment.systemPackages = [
     pkgs.nushell
+    pkgs.starship
+    pkgs.eza
   ];
 }
