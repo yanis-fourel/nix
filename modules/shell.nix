@@ -1,7 +1,4 @@
 { pkgs, ... }:
-let
-  nushell = pkgs.callPackage ./nushell.nix { };
-in
 {
   programs.zsh = {
     enable = true;
@@ -16,8 +13,7 @@ in
   };
 
   environment.systemPackages = [
-    # pkgs.nushell
-    nushell
+    pkgs.nushell
     pkgs.starship
     pkgs.eza
   ];
