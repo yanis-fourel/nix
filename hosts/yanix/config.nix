@@ -95,6 +95,10 @@
     pkgs.openssl # needed to dev on nushell, TODO
   ];
 
+  environment.sessionVariables = {
+    PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
+  };
+
   system.activationScripts = {
     cleartoficache.text = "rm -f /home/yanis/.cache/tofi-drun"; # https://github.com/philj56/tofi/issues/115
   };
