@@ -15,7 +15,7 @@
   users.users.yanis = {
     isNormalUser = true;
     extraGroups = [ "wheel" ];
-    # shell = pkgs.nushell;
+    shell = pkgs.nushell;
   };
   nix.settings.allowed-users = [ "yanis" ];
   security.sudo.wheelNeedsPassword = false;
@@ -92,6 +92,7 @@
     pkgs.i3
     pkgs.lmms
     pkgs.gammastep
+    pkgs.openssl # needed to dev on nushell, TODO
   ];
 
   system.activationScripts = {
