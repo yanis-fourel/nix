@@ -21,8 +21,8 @@
     enable = true;
     group = "yanis";
     user = "yanis";
-    dataDir = "/home/yanis/Syncthings"; # Default folder for new synced folders
-    configDir = "/home/myusername/Syncthings/.config/syncthing"; # Folder for Syncthing's settings and keys
+    dataDir = "/home/yanis/st"; # Default folder for new synced folders
+    configDir = "/home/myusername/st/.config/syncthing"; # Folder for Syncthing's settings and keys
   };
 
   nix.settings.allowed-users = [ "yanis" ];
@@ -40,8 +40,6 @@
     inputs.mynvim.overlays.default
   ];
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
   environment.systemPackages = [
     pkgs.vim # needed for rvim
     pkgs.nvim-pkg # my custom nvim overlay
