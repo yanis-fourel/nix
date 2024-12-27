@@ -17,6 +17,14 @@
     extraGroups = [ "wheel" ];
     shell = pkgs.nushell;
   };
+  services.syncthing = {
+    enable = true;
+    group = "yanis";
+    user = "yanis";
+    dataDir = "/home/yanis/Syncthings"; # Default folder for new synced folders
+    configDir = "/home/myusername/Syncthings/.config/syncthing"; # Folder for Syncthing's settings and keys
+  };
+
   nix.settings.allowed-users = [ "yanis" ];
   security.sudo.wheelNeedsPassword = false;
 
@@ -92,7 +100,8 @@
     pkgs.i3
     pkgs.lmms
     pkgs.gammastep
-    pkgs.openssl # needed to dev on nushell, TODO
+    pkgs.openssl # needed to dev on nushell, TODO make it nix shell?
+    # When cleaning this up, also need to remove PKG_CONFIG_PATH sessionVariables
   ];
 
   environment.sessionVariables = {
