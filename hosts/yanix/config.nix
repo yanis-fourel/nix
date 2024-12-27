@@ -22,7 +22,7 @@
     group = "yanis";
     user = "yanis";
     dataDir = "/home/yanis/st"; # Default folder for new synced folders
-    configDir = "/home/myusername/st/.config/syncthing"; # Folder for Syncthing's settings and keys
+    configDir = "/home/yanis/st/.config/syncthing"; # Folder for Syncthing's settings and keys
   };
 
   nix.settings.allowed-users = [ "yanis" ];
