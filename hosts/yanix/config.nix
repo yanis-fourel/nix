@@ -14,7 +14,10 @@
 
   users.users.yanis = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ];
+    extraGroups = [
+      "wheel"
+      "yanis"
+    ];
     shell = pkgs.nushell;
   };
   services.syncthing = {
