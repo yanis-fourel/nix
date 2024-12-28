@@ -16,13 +16,12 @@
     isNormalUser = true;
     extraGroups = [
       "wheel"
-      "yanis"
     ];
     shell = pkgs.nushell;
   };
   services.syncthing = {
     enable = true;
-    group = "yanis";
+    group = "users";
     user = "yanis";
     dataDir = "/home/yanis/st"; # Default folder for new synced folders
     configDir = "/home/yanis/st/.config/syncthing"; # Folder for Syncthing's settings and keys
