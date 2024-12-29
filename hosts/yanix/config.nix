@@ -2,6 +2,7 @@
   config,
   pkgs,
   inputs,
+  pkg_ghostty,
   ...
 }:
 {
@@ -104,6 +105,7 @@
     # When cleaning this up, also need to remove PKG_CONFIG_PATH sessionVariables
     pkgs.yazi
     pkgs.btop
+    pkg_ghostty
   ];
 
   environment.sessionVariables = {
