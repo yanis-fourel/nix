@@ -52,7 +52,6 @@
     pkgs.tmux
     pkgs.git
     pkgs.dunst
-    pkgs.kitty
     pkgs.stow
     pkgs.grim
     pkgs.slurp
