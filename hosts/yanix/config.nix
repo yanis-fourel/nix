@@ -28,6 +28,9 @@
     configDir = "/home/yanis/st/.config/syncthing"; # Folder for Syncthing's settings and keys
   };
 
+  virtualisation.virtualbox.host.enable = true;
+  users.extraGroups.vboxusers.members = [ "yanis" ];
+
   nix.settings.allowed-users = [ "yanis" ];
   security.sudo.wheelNeedsPassword = false;
 
