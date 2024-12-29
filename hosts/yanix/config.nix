@@ -103,7 +103,7 @@
     pkgs.openssl # needed to dev on nushell, TODO make it nix shell?
     # When cleaning this up, also need to remove PKG_CONFIG_PATH sessionVariables
     pkgs.yazi
-    pkgs.htop
+    pkgs.btop
   ];
 
   environment.sessionVariables = {

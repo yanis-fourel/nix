@@ -934,6 +934,18 @@ export def thenullptr [] bytes->nothing {
     $in | curl -F 'file=@-' 0x0.st
 }
 
+# Starts Yazi and change the current working directory 
+# when exiting Yazi with `q`.
+# Exit with `Q` instead to not change current working directory
+def --env y [...args] {
+    let tmp = (mktemp -t "yazi-cwd.XXXXXX")
+        yazi ...$args --cwd-file $tmp
+        let cwd = (open $tmp)
+        if $cwd != "" and $cwd != $env.PWD {
+            cd $cwd
+        }
+    rm -fp $tmp
+}
 
 use std/util "path add"
 
