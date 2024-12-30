@@ -24,8 +24,8 @@
     enable = true;
     group = "users";
     user = "yanis";
-    dataDir = "/home/yanis/st"; # Default folder for new synced folders
-    configDir = "/home/yanis/st/.config/syncthing"; # Folder for Syncthing's settings and keys
+    dataDir = "/home/yanis/Sync"; # Default folder for new synced folders
+    configDir = "/home/yanis/Sync/.config/syncthing"; # Folder for Syncthing's settings and keys
   };
 
   virtualisation.virtualbox.host.enable = true;
