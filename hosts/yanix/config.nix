@@ -108,6 +108,7 @@
     pkgs.yazi
     pkgs.btop
     pkg_ghostty
+    pkgs.trash-cli
   ];
 
   environment.sessionVariables = {
