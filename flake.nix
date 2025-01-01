@@ -4,7 +4,7 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
     nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
-    # mynvim.url = "path:./nvim/";
+    mynvim.url = "path:./nvim/";
 
     # rust toolchain
     fenix = {

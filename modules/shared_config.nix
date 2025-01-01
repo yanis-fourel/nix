@@ -39,12 +39,12 @@
 
   nixpkgs.overlays = [
     inputs.fenix.overlays.default
-    # inputs.mynvim.overlays.default
+    inputs.mynvim.overlays.default
   ];
 
   environment.systemPackages = [
     pkgs.vim # needed for rvim
-    # pkgs.nvim-pkg # my custom nvim overlay
+    pkgs.nvim-pkg # my custom nvim overlay
     pkgs.pavucontrol
     pkgs.wget
     pkgs.lshw
