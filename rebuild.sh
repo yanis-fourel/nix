@@ -1,7 +1,7 @@
 # Based on NoBoilerplates' dotfiles. I love his youtube channel
 
 set -e
-pushd ~/nixos/
+pushd ~/nix/
 git add .
 nix flake update mynvim
 sudo nix flake lock

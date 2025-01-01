@@ -25,20 +25,15 @@
       ghostty,
       ...
     }@inputs:
-    let
-      system = "x86_64-linux";
-      host = "yanix";
-      pkg_ghostty = ghostty.packages.${system}.default;
-    in
     {
       packages.x86_64-linux.default = fenix.packages.x86_64-linux.minimal.toolchain;
-      nixosConfigurations.${host} = nixpkgs.lib.nixosSystem {
-        specialArgs = {
-          inherit system;
+      nixosConfigurations.yanix = nixpkgs.lib.nixosSystem {
+        specialArgs = rec {
+          system = "x86_64-linux";
           inherit inputs;
-          inherit pkg_ghostty;
+          pkg_ghostty = ghostty.packages.${system}.default;
         };
-        modules = [ ./hosts/${host}/config.nix ];
+        modules = [ ./hosts/yanix/config.nix ];
       };
     };
 }
