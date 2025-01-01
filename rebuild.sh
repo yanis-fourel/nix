@@ -3,7 +3,6 @@
 set -e
 pushd ~/nix/
 git add .
-nix flake update mynvim
 sudo nix flake lock
 git add .
 echo "NixOS Rebuilding..."

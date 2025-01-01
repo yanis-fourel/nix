@@ -27,6 +27,7 @@
     }@inputs:
     {
       packages.x86_64-linux.default = fenix.packages.x86_64-linux.minimal.toolchain;
+
       nixosConfigurations.yanix = nixpkgs.lib.nixosSystem {
         specialArgs = rec {
           system = "x86_64-linux";
@@ -34,6 +35,15 @@
           pkg_ghostty = ghostty.packages.${system}.default;
         };
         modules = [ ./hosts/yanix/config.nix ];
+      };
+
+      nixosConfigurations.ledr-yanix = nixpkgs.lib.nixosSystem {
+        specialArgs = rec {
+          system = "x86_64-linux";
+          inherit inputs;
+          pkg_ghostty = ghostty.packages.${system}.default;
+        };
+        modules = [ ./hosts/ledr-yanix/config.nix ];
       };
     };
 }
